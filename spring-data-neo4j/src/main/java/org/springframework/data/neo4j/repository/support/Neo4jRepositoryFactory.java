@@ -74,6 +74,6 @@ public class Neo4jRepositoryFactory extends RepositoryFactorySupport {
 	@Override
 	protected Optional<QueryLookupStrategy> getQueryLookupStrategy(QueryLookupStrategy.Key key,
 																   EvaluationContextProvider evaluationContextProvider) {
-		return Optional.of(new GraphQueryLookupStrategy(session));
+		return Optional.of(new GraphQueryLookupStrategy(session, evaluationContextProvider));
 	}
 }
